@@ -2,10 +2,11 @@ import Button from "../Button/Button";
 import { CiLocationOn } from "react-icons/ci";
 import { RiMoneyEuroCircleLine } from "react-icons/ri";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 
 const FeaturedJob = ({ jobs }) => {
-    const { logo, job_title, company_name,
+    const { id, logo, job_title, company_name,
         remote_or_onsite, job_type, location, salary
     } = jobs;
     return (
@@ -24,7 +25,7 @@ const FeaturedJob = ({ jobs }) => {
                 <div className="flex items-center gap-1"><RiMoneyEuroCircleLine /><p>Salary: {salary}</p></div>
             </div>
 
-            <Button btnText="View Details"></Button>
+            <Link to={`/job/${id}`}><Button btnText="View Details"></Button></Link>
         </div >
     );
 };

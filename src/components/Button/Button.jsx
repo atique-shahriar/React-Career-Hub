@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Button = ({ btnText }) => {
     return (
         <div>
@@ -5,5 +7,8 @@ const Button = ({ btnText }) => {
         </div>
     );
 };
+Button.propTypes = {
+    btnText: PropTypes.object,
+}
 
 export default Button;
